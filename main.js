@@ -8,16 +8,17 @@ function init() {
 		1, // near clipping plane
 		1000 // far clipping plane
 	);
-	camera.position.z = 30;
+	camera.position.z =80;
 	camera.position.x = 0;
 	camera.position.y = 20;
 	camera.lookAt(new THREE.Vector3(0, 0, 0));
+	
 
 	// var particleGeo = new THREE.Geometry();
 	var particleMat = new THREE.PointsMaterial({
 		color: 'rgb(255, 255, 255',
 		size: .25,
-		map: new THREE.TextureLoader().load('wu.png'),
+		map: new THREE.TextureLoader().load('fire.png'),
 		transparent: true,
 		blending: THREE.AdditiveBlending,
 		depthWrite: false
@@ -26,8 +27,8 @@ function init() {
 
 	var particleMat2 = new THREE.PointsMaterial({
 		color: 'rgb(255, 255, 255',
-		size: .25,
-		map: new THREE.TextureLoader().load('wu2.png'),
+		size: .15,
+		map: new THREE.TextureLoader().load('smoke.png'),
 		transparent: true,
 		blending: THREE.AdditiveBlending,
 		depthWrite: false
@@ -41,7 +42,7 @@ function init() {
 		vertex.z += (Math.random()- 0.5);
 	})
 
-	var particleGeo2 = new THREE.SphereGeometry (10, 300, 100);	
+	var particleGeo2 = new THREE.SphereGeometry (10, 600, 100);	
 	
 	particleGeo2.vertices.forEach(function(vertex){
 		vertex.x += (Math.random()- 0.5);
@@ -49,8 +50,8 @@ function init() {
 		vertex.z += (Math.random()- 0.5);
 	})
 
-	var particleCount = 20000;
-	var particleDistance = 10;
+	var particleCount = 200000;
+	var particleDistance = 100;
 
 	for(var i =0; i<particleCount; i++ ){
 		var posX = (Math.random() - 0.5) * particleDistance;
@@ -61,6 +62,7 @@ function init() {
 	
 		particleGeo.vertices.push(particle);
 	}
+
 
 	// for(var i =0; i<particleCount; i++ ){
 	// 	var posX = (Math.random() - 0.5) * particleDistance;
@@ -95,20 +97,19 @@ function init() {
 
 
 	// renderer
-	var renderer = new THREE.WebGLRenderer();
-	renderer.setSize(window.innerWidth, window.innerHeight);
-	renderer.shadowMap.enabled = true;
-	renderer.setClearColor('rgb(20, 20, 20)');
+	var renderer = new THREE.WebGLRenderer({canvas: document.querySelector(".diagram canvas")});;
+	// renderer.setSize(window.innerWidth, window.innerHeight);
+	// renderer.shadowMap.enabled = true;
+	// renderer.setClearColor('rgb(20, 20, 20)');
 
 	var controls = new THREE.OrbitControls( camera, renderer.domElement );
 
 	document.getElementById('webgl').appendChild(renderer.domElement);
-
+	
 	update(renderer, scene, camera, controls);
 
 	return scene;
 }
-
 
 function update(renderer, scene, camera, controls) {
 	controls.update();
@@ -145,7 +146,22 @@ function update(renderer, scene, camera, controls) {
 
 	// particleSystem.geometry.verticesNeedUpdate = true;
 	
+function resizeCanvasToDisplaySize() {
+	const canvas = renderer.domElement;
+	const width = canvas.clientWidth;
+	const height = canvas.clientHeight;
+	if (canvas.width !== width ||canvas.height !== height) {
+	  // you must pass false here or three.js sadly fights the browser
+	  renderer.setSize(width, height, false);
+	  camera.aspect = width / height;
+	  camera.updateProjectionMatrix();
+  
+	  // set render target sizes here
+	}
+  }
 	requestAnimationFrame(function() {
+		
+		resizeCanvasToDisplaySize();
 		update(renderer, scene, camera, controls);
 	});
 }
