@@ -1,201 +1,194 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<title>Three.js</title>
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-	integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-<link rel="stylesheet" href="portfolio.css">
-<link href="https://fonts.googleapis.com/css2?family=Pragati+Narrow&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-<script src="https://kit.fontawesome.com/8ab78ac859.js" crossorigin="anonymous"></script>
-	<link rel="stylesheet" type="text/css" href="style.css">
-	<style type="text/css">
-		html, body {margin: 0; padding: 0;}
-		
+
+	<head>
+		<title>Three.js</title>
+		<link rel="stylesheet"
+			href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+			integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+			crossorigin="anonymous">
+		<link rel="stylesheet" href="portfolio.css">
+		<link
+			href="https://fonts.googleapis.com/css2?family=Pragati+Narrow&display=swap"
+			rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+			rel="stylesheet">
+		<script src="https://kit.fontawesome.com/8ab78ac859.js"
+			crossorigin="anonymous"></script>
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<style type="text/css">
+		html,
+		body {
+			margin: 0;
+			padding: 0;
+		}
 	</style>
-		
-</head>
-<body>
-    <div class="navbar-container fixed-top">
-        <nav>
-            <ul class="navbar">
-                <li id = "me"> <a href="#">Jason Line</a></li>
-                <li class="nav-menu">
+	</head>
+
+	<body>
+		<div class="navbar-container">
+			<nav></nav>
+			<ul class="navbar">
+				<li id="me"> <a href="#">Jason Line</a></li>
+				<li class="nav-menu">
 					<a href="./portfolio_images/Jason_Line_Resume.pdf" target="_blank">
 						<i class="far fa-file fa-2x"></i></a></li>
 				<li class="gitHub">
-							<a href="https://github.com/JMLINE" target="_blank"> <i class="fab fa-github fa-2x"></i></a></li>
+					<a href="https://github.com/JMLINE" target="_blank"> <i class="fab
+							fa-github fa-2x"></i></a></li>
 				<li class="linkedIn">
-							<a href="https://www.linkedin.com/in/jason-line-6809b2110/" target="_blank"><i
-									class="fab fa-linkedin fa-2x"></i></a></li>   
+					<a href="https://www.linkedin.com/in/jason-line-6809b2110/"
+						target="_blank"><i
+							class="fab fa-linkedin fa-2x"></i></a></li>
+			</ul>
 
-            </ul>
-        </nav>
+		</div>
+		<div class='hello_container'>
+			<div class='hello'>
+				<div class="diagram"><canvas></canvas></div>
+			</div>
+		</div>
+
+
+		<div id="webgl"></div>
+		<script src="Tween.min.js"></script>
+		<script src="perlin.js"></script>
+		<script src="dat.gui.min.js"></script>
+		<script src="three.js"></script>
+		<script src="ObjectLoader.js"></script>
+		<script src="OrbitControls.js"></script>
+		<script src="main.js"></script>
+
+
+		<div class="about-container">
+			<div class="about-title">About Me</div>
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-lg-2 face">
+
+						<img src="./portfolio_images/face.png" height="200px">
+					</div>
+
+					<div class="col-xl-4 aboutPara">
+						<p> Hi, I’m Jason. I’m a full-stack developer based in Indianapolis. I’m
+							skilled in HTML, CSS, and
+							JavaScript. I enjoy building functional websites, as well as creating 3D
+							experiences. I have a
+							passion for problem-solving and writing code...annnddd...I make a pretty
+							good lasagna as well.
+						</p>
+					</div>
+
+				</div>
+				<div class="row">
+					<div class="col-lg-4 efa">
+						<a
+							href="https://www.youracclaim.com/badges/5a9e7d21-954f-4ec8-8ed0-6d043c846f84/public_url"
+							target="blank"><img src="./portfolio_images/WD_gold.png" height="300px"
+								width="300px"></a>
+					</div>
+
+					<div class="col-lg-4 efa">
+						<a
+							href="https://www.youracclaim.com/badges/cf1b8299-06ac-458f-b517-0add87133b75/public_url"
+							target="blank"><img src="./portfolio_images/WD_blue.png" height="300px"
+								width="300px"></a>
+					</div>
+
+					<div class="col-lg-4 efa">
+						<a
+							href="https://www.youracclaim.com/badges/3e93c7f2-1b2b-4a4c-8ffc-58a0a7cc8205/public_url"
+							target="blank"><img src="./portfolio_images/WD_red.png" height="300px"
+								width="300px"></a>
+					</div>
+				</div>
+			</div>
+		</div>
 	</div>
-	<div class = 'hello_container'>
-		<div class = 'hello'>
-	<div class="diagram"><canvas></canvas></div>
-	</div>
-	</div>	
-		
 
-	<div id="webgl"></div>
-	<script src="Tween.min.js"></script>
-	<script src="perlin.js"></script>
-	<script src="dat.gui.min.js"></script>
-	<script src="three.js"></script>
-	<script src="ObjectLoader.js"></script>
-	<script src="OrbitControls.js"></script>
-	<script src="main.js"></script>
+	<div id="projects">
+		<div class="projects_title">
+			<p><b>Projects</b></p>
+		</div>
 
-
-
-<div class="space">
-	<h1 id="about"></h1>
-</div>
-<br>
-<br>
-
-
-<div class="about-container">
-	<div class="about-title">About Me</div>
-	<div class="container-fluid">
 		<div class="row">
-			<div class="col-lg-2 face">
-				<img src="./portfolio_images/face.png" height="200px">
+			<div class="col-lg-4 projects">
+				<h1>Fishbook</h1>
+				<img src="./portfolio_images/fishes.jpg" style="height: 265px" alt="Avatar"
+					class="image"><a
+					href="https://jl-fishbook-app-log.herokuapp.com/" target="blank">
+					<div class="overlay1">
+						<div class="text">An app for the avid fisherman, allows the user to upload photos of their catch and have them stored in one convenient place. <br>
+							Made with React and uses PostgreSQL<br>
+							Username: Tester  Password: test1234</div>
+					</div>
+				</a>
 			</div>
 
-			<div class="col-lg-8 aboutPara">
-				<p> I’m a Navy Veteran and a recent graduate of Eleven Fifty’s JavaScript program (Oct 2019-Apr
-					2020). I have a passion for all aspects of web development and I enjoy problem-solving, as well as taking
-					on challenging tasks. I’ve spent most of my career in the Sales industry, but once I discovered
-					my passion for development, I decided to make a change.</p>
-			</div>
+			<div class="col-lg-4 projects">
+				<h1>Film Street</h1>
+				<img src="./portfolio_images/movie.jpg" style="height: 265px" alt="Avatar"
+					class="image"><a href="https://film-street.herokuapp.com/" target="blank">
+					<div class="overlay2">
+						<div class="text">A team project that was created for movie buffs in mind.  The App allows the user to search a database and keep track of a watch list. <br>
+							Built with Angular9 uses PostgreSQL.</div>
+					</div>
+				</a>
+				</div>
 
-		</div>
-
-		<div class="efa">
-			<a href="https://www.youracclaim.com/badges/253e2c24-e0a6-440b-b0ea-aebcd0b27f15/public_url"
-				target="blank"><img src="./portfolio_images/eleven-fifty-academy-graduate.png" height="300px"
-					width="300px"></a>
-		</div>
-	</div>
-</div>
-<!-- <div class="about-container">
-
-	<div class="about-title">
-		<p>About</p>
-	</div>
-
-	<div class="ab
-	<div class="efa">
-		<a href="https://www.youracclaim.com/badges/253e2c24-e0a6-440b-b0ea-aebcd0b27f15/public_url"
-			target="blank"><img src="./portfolio_images/eleven-fifty-academy-graduate.png" height="300px"
-				width="300px"></a>
-	</div>
-</div>
-<div class="space2">
-	<h1 id="projects"></h1>
-</div> -->
-<br>
-<br>
+				<div class="col-lg-4 projects">
+					<h1>Weather App</h1>
+					<img src="./portfolio_images/weather.jpg" style="height: 265px"
+						alt="Avatar" class="image"><a href="https://weather-api-f72d6.firebaseapp.com/" target="blank">
+						<div class="overlay3">
+							<div class="text">A simple app that allows the user to check current weather conditions by simply adding the coordinates for the desired location.<br>
+							Built with simple JavaScript and deployed to Firebase</div>
+						</div>
+						</a>
+					</div>
+				</div>
 
 
+				<h1 id="contact_me"></h1>
 
-<div id="projects">
-	<div class="projects_title">
-		<h1><b>Projects</b></h1>
-	</div>
-	<div class="container-fluid projects">
-		<div class="row justify-content-center">
-			<div class="card-deck">
 
-				<div class="col-auto mb-3">
-					<div class="card" style="width: 18rem;">
-						<img src="./portfolio_images/fishbook.PNG" class="card-img-top" alt="...">
-						<div class="card-body">
-							<h5 class="card-title">Fishbook</h5>
-							<p class="card-text">A React app used to catalog fishes.<br>
-								Username: Tester |
-								Password: test1234
-							</p>
-							<a href="https://jl-fishbook-app-log.herokuapp.com/" class="btn btn-primary"
-								target='blank'>Check it
-								out</a>
+				<div class="container-fluid contact">
+					<div class="contact_me">
+						<h2>Contact Me</h2>
+					</div>
+					<div class="row">
+						<div class="col-lg-6">Feel free to reach out and I will respond just as
+							soon as I can.</div>
+						<div class="col-lg-6">
+
+							<form action="https://formspree.io/xzbzpdpw" method="POST">
+
+								<label for="fname"></label>
+								<input type="text" id="fname" name="firstname" placeholder="Name...">
+								<label for="email"></label>
+								<input type="text" id="email" name="em" placeholder="Email...">
+
+								<label for="subject"></label>
+								<textarea id="message" name="message" placeholder="Message..."
+									style="height:100px"></textarea>
+
+								<input type="submit" value="Submit" style="width: 100%; align-self:
+									center;">
+
+							</form>
+
 						</div>
 					</div>
 				</div>
 
 
-				<div class="col-auto mb-3">
-					<div class="card " style="width: 18rem;">
-						<img src="./portfolio_images/filmStreet.PNG" class="card-img-top" alt="...">
-						<div class="card-body">
-							<h5 class="card-title">Film Street</h5>
-							<p class="card-text">A team project using Angular and Material
-							</p>
-							<a href="https://film-street.herokuapp.com/" target='blank'class="btn btn-primary">Check it out</a>
-						</div>
-					</div>
+				<div class="footer">
+
+					<p>Jason Line 2020</p>
+
 				</div>
 
 
-				<div class="col-auto mb-3">
-					<div class="card" style="width: 18rem;">
-						<img src="./portfolio_images/weatherIcon.png" height="177px" class="card-img-top" alt="...">
-						<div class="card-body">
-							<h5 class="card-title">Weather API</h5>
-							<p class="card-text"><b><u>Basic</u></b> app showing the fetching functionality from an
-								API.
-								Prepare for a trip back in time.</p>
-							<a href="https://jmline.github.io/Api-Project/" target='blank'class="btn btn-primary">Check it out</a>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-</div>
-
-
-
-
-<br>
-<h1 id="contact_me"></h1>
-<br>
-
-<div class="container-fluid contact">
-	<div class="contact_me">
-		<h2>Contact Me</h2>
-	</div>
-	<div class="row">
-		<div class="col-lg-6">Feel free to reach out and I will respond just as soon as I can.</div>
-		<div class="col-lg-6">
-
-			<form action="https://formspree.io/xzbzpdpw" method="POST">
-
-				<label for="fname"></label>
-				<input type="text" id="fname" name="firstname" placeholder="Name...">
-
-				<label for="email"></label>
-				<input type="text" id="email" name="em" placeholder="Email...">
-
-				<label for="subject"></label>
-				<textarea id="message" name="message" placeholder="Message..." style="height:100px"></textarea>
-
-				<input type="submit" value="Submit" style=" width: 100%; align-self: center;">
-
-			</form>
-
-		</div>
-	</div>
-</div>
-
-
-<div class="footer">
-	<p>Jason Line 2020</p>
-
-</div>
 
 
 
@@ -225,21 +218,24 @@
 
 
 
+				<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+					integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+					crossorigin="anonymous">
+	</script>
+				<script
+					src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+					integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+					crossorigin="anonymous">
+	</script>
+				<script
+					src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+					integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+					crossorigin="anonymous">
+	</script>
+			</body>
 
+		</html>
 
-<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
-	integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous">
-</script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-	integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
-</script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
-	integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
-</script>
-</body>
-
-</html>
-
-</body>
+	</body>
 
 </html>
