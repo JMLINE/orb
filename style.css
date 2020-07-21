@@ -62,10 +62,10 @@ canvas {
 }
 
 .aboutPara {
-  font-size: 3.5vh;
+  font-size: 3vh;
   font-family: "Fira Sans", sans-serif;
   color: white;
-  word-wrap: break-word;
+  word-wrap: normal;
 }
 
 .face {
