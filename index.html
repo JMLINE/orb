@@ -30,7 +30,7 @@
 		<div class="navbar-container">
 			<nav></nav>
 			<ul class="navbar">
-				<li id="me"> <a href="#">Jason Line</a></li>
+				<li id="me">Jason Line</li>
 				<li class="nav-menu">
 					<a href="./portfolio_images/Jason_Line_Resume.pdf" target="_blank">
 						<i class="far fa-file fa-2x"></i></a></li>
@@ -51,7 +51,7 @@
 		</div>
 
 
-		<div id="webgl"></div>
+		<div id="webgl" class="container"></div>
 		<script src="Tween.min.js"></script>
 		<script src="perlin.js"></script>
 		<script src="dat.gui.min.js"></script>
@@ -70,13 +70,13 @@
 						<img src="./portfolio_images/face.png" height="200px">
 					</div>
 
-					<div class="col-xl-4 aboutPara">
+					<div class="col-lg-4 aboutPara">
 						<p> Who’s this swell guy, you say?  Hi, I’m Jason, a Web Developer and part-time Learning Assistant at Eleven Fifty Academy.  Proficient in HTML, CSS, and JavaScript, but I’m always interested in learning something new.  If you’d like to connect, feel free to send me a message below.
 						</p>
 					</div>
 
 				</div>
-				<div class="row">
+				<!-- <div class="row">
 					<div class="col-lg-4 efa">
 						<a
 							href="https://www.youracclaim.com/badges/5a9e7d21-954f-4ec8-8ed0-6d043c846f84/public_url"
@@ -97,18 +97,70 @@
 							target="blank"><img src="./portfolio_images/WD_red.png" height="300px"
 								width="300px"></a>
 					</div>
+				</div> -->
+			</div>
+		</div>
+	
+	<br>
+
+	
+	<div class = "projects-container-fluid">
+		<div class = "projects_title"><b>Projects</b></div>
+		<div class ="row">
+			<div class = "col-lg-4 projects">
+				<h1>Fishbook</h1>
+				 <img src = "portfolio_images/fishes.jpg" class="projects" style = "width: 100%; height: auto"></a>
+				<div class="overlay1"><a href ="https://jl-fishbook-app-log.herokuapp.com/" target="blank">
+					<div class="text">An app for fisherman, allows the user to upload photos of their catch and have them stored in one convenient place. <br>
+						Made with React and uses PostgreSQL
+						Username: Tester  Password: test1234</div></a>
 				</div>
 			</div>
+
+			<div class = "col-lg-4 projects">
+				<h1>Film Street</h1>
+				 <img src = "./portfolio_images/movie.jpg" style = "width: 100%; height: auto;"></a>
+				<div class="overlay2"><a href ="https://film-street.herokuapp.com/" target="blank">
+					<div class="text">A team project that was created for movie buffs in mind.  The app allows the user to search a database and keep track of a watch list. <br>
+						Built with Angular9 uses PostgreSQL.</div></a>
+				</div>
+			</div>
+
+			<div class = "col-lg-4 projects">
+				<h1>Weather App</h1>
+				 <img src = "./portfolio_images/weather3.jpg" style = "width: 100%; height: auto;"></a>
+				<div class="overlay3"><a href ="https://weather-api-f72d6.firebaseapp.com/" target="blank">
+					<div class="text">A simple app that allows the user to check current weather conditions by simply adding the coordinates for the desired location.<br>
+						Built with simple JavaScript and deployed to Firebase</div></a>
+				</div>
+			</div>
+<!-- END OF FIRST ROW -->
+
+
+
+	<div class = "col-lg-4 projects">
+		<h1>CSS Creature</h1>
+		 <img src = "./portfolio_images/lights.jpg" class="projects" style = "width: 100%; height: auto"></a>
+		<div class="overlay3"><a href ="https://jmline.github.io/CSS-Creature/" target="blank">
+			<div class="text">Just a simple CSS animation, primarily utilizing @keyframes.</div></a>
+		</div>
+	</div>
+		
+
+	<div class = "col-lg-4 projects"></div>
+	<div class = "col-lg-4 projects"></div>
+
+
+<!-- All projects BEFORE the last 2 divs -->
+
 		</div>
 	</div>
 
-	<div id="projects">
-		<div class="projects_title">
-			<p><b>Projects</b></p>
-		</div>
-
+		<!-- <div class="projects_title">
+			<p><b>Projects</b></p></div>
+	
 		<div class="row">
-			<div class="col-lg-4 projects">
+			<div class="col mx-4 projects">
 				<h1>Fishbook</h1>
 				<img src="./portfolio_images/fishes.jpg" style="height: 265px" alt="Avatar"
 					class="image"><a
@@ -120,8 +172,8 @@
 					</div>
 				</a>
 			</div>
-
-			<div class="col-lg-4 projects">
+		
+			<div class="col mx-4 projects">
 				<h1>Film Street</h1>
 				<img src="./portfolio_images/movie.jpg" style="height: 265px" alt="Avatar"
 					class="image"><a href="https://film-street.herokuapp.com/" target="blank">
@@ -130,9 +182,9 @@
 							Built with Angular9 uses PostgreSQL.</div>
 					</div>
 				</a>
-				</div>
+			</div>
 
-				<div class="col-lg-4 projects">
+			<div class="col mx-4 projects">
 					<h1>Weather App</h1>
 					<img src="./portfolio_images/weather.jpg" style="height: 265px"
 						alt="Avatar" class="image"><a href="https://weather-api-f72d6.firebaseapp.com/" target="blank">
@@ -140,11 +192,11 @@
 							<div class="text">A simple app that allows the user to check current weather conditions by simply adding the coordinates for the desired location.<br>
 							Built with simple JavaScript and deployed to Firebase</div>
 						</div>
-						</a>
-					</div>
-				</div>
-				<div class = "row">
-				<div class="col-lg-4 projects">
+				</a>
+			</div>
+		</div>
+		<div class = "row">
+			<div class="col-auto mb-4 projects">
 					<h1>CSS Creature</h1>
 					<img src="./portfolio_images/lights.jpg" style="height: 265px" alt="Avatar"
 						class="image"><a
@@ -153,21 +205,25 @@
 							<div class="text">Just a simple CSS animation, primarily utilizing @keyframes.
 						</div>
 					</a>
-				</div>
-</div>
-</div>
-
-				<h1 id="contact_me"></h1>
+			</div>
+			</div> -->
 
 
-				<div class="container-fluid contact">
-					<div class="contact_me">
-						<h2>Contact Me</h2>
-					</div>
-					<div class="row">
-						<div class="col-lg-6">Feel free to reach out and I will respond just as
-							soon as I can.</div>
-						<div class="col-lg-6">
+
+
+			
+
+
+	<div class="container-fluid contact">
+		<div class="contact_me">
+			<h2>Contact Me</h2>
+		</div>
+		<div class="row">
+			<div class="col-xl-6">Feel free to reach out and I will respond just as soon as I can.<br><br>
+				<img src = "portfolio_images/type.jpg" style="height: 350px;">
+			</div>
+			
+			<div class="col-xl-6">
 
 							<form action="https://formspree.io/xzbzpdpw" method="POST">
 
@@ -185,16 +241,15 @@
 
 							</form>
 
-						</div>
-					</div>
-				</div>
+			</div>
+		</div>
+	</div>
 
 
-				<div class="footer">
+	<div class="footer">
+		<p>Jason Line 2020</p>
 
-					<p>Jason Line 2020</p>
-
-				</div>
+	</div>
 
 
 
