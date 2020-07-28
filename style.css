@@ -260,10 +260,10 @@ input[type="submit"]:hover {
   color: rgb(245, 239, 239);
 }
 #name {
-  font-size: 4vh;
+  font-size: 3vh;
 }
 #credits {
-  font-size: 3vh;
+  font-size: 2vh;
 }
 #footerList {
   list-style-type: none;
