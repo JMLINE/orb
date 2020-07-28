@@ -84,14 +84,14 @@ canvas {
 
 .about-title {
   text-align: center;
-  font-size: 5vh;
+  font-size: 7vh;
   padding: 10px;
   color: white;
   background-clip: border-box;
 }
 
 .aboutPara {
-  font-size: 3vh;
+  font-size: 4vh;
   color: white;
   word-wrap: normal;
 }
@@ -206,15 +206,15 @@ canvas {
   justify-content: center;
   align-items: center;
   padding-top: 130px;
-
   color: white;
+  font-size: 6vh;
 }
 
 .contact {
   color: white;
   background-color: black;
   background-size: cover;
-  font-size: 15pt;
+  font-size: 4vh;
   text-align: center;
   border-radius: 130px 290px;
 }
@@ -258,4 +258,11 @@ input[type="submit"]:hover {
   width: 100%;
   background-color: #222831;
   color: rgb(245, 239, 239);
+}
+
+#footerList {
+  list-style-type: none;
+  white-space: nowrap;
+  display: inline-block;
+  text-align: center;
 }
