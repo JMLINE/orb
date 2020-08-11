@@ -1,6 +1,6 @@
 html {
   --scrollbarBG: grey;
-  --thumbBG: darkgreen;
+  --thumbBG: #003366;
 }
 body::-webkit-scrollbar {
   width: 11px;
@@ -60,7 +60,7 @@ canvas {
 }
 
 .navbar a:hover {
-  color: grey;
+  color: #003366;
 }
 
 /* .sub2 {
@@ -115,9 +115,9 @@ canvas {
 
 .projects_title {
   text-align: center;
+  font-size: 7vh;
   color: #c83912;
   text-shadow: #e4b330 5px 7px 10px;
-  font-size: 7vh;
   padding-top: 130px;
 }
 
@@ -233,7 +233,7 @@ textarea {
 }
 
 input[type="submit"] {
-  background-color: lightseagreen;
+  background-color: #003366;
   color: black;
   padding: 12px 20px;
   border: none;
@@ -243,9 +243,8 @@ input[type="submit"] {
 }
 
 input[type="submit"]:hover {
-  background-color: #c5cace;
-  background-image: url(./portfolio_images/letter.gif);
-  filter: saturate(10);
+  background-color: #0047ab;
+  background-image: url("./portfolio_images/200.gif");
   background-size: contain;
   background-repeat: no-repeat;
 }
