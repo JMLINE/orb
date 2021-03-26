@@ -271,3 +271,9 @@ input[type="submit"]:hover {
   text-align: center;
 }
 
+#warning{
+  text-align: center;
+  color: white;
+  background-color: red;
+  font-size: 25px;
+}
