@@ -8,7 +8,8 @@ function init() {
 		1, // near clipping plane
 		1000 // far clipping plane
 	);
-	camera.position.z = 80;
+	// z axis was 80
+	camera.position.z = 20;
 	camera.position.x = 0;
 	camera.position.y = 20;
 	camera.lookAt(new THREE.Vector3(0, 0, 0));
@@ -34,7 +35,7 @@ function init() {
 
 	var particleGeo = new THREE.SphereGeometry(10, 100, 100);
 
-	particleGeo.vertices.forEach(function(vertex) {
+	particleGeo.vertices.forEach(function (vertex) {
 		vertex.x += Math.random() - 0.5;
 		vertex.y += Math.random() - 0.5;
 		vertex.z += Math.random() - 0.5;
@@ -42,7 +43,7 @@ function init() {
 
 	var particleGeo2 = new THREE.SphereGeometry(10, 600, 100);
 
-	particleGeo2.vertices.forEach(function(vertex) {
+	particleGeo2.vertices.forEach(function (vertex) {
 		vertex.x += Math.random() - 0.5;
 		vertex.y += Math.random() - 0.5;
 		vertex.z += Math.random() - 0.5;
@@ -103,7 +104,7 @@ function update(renderer, scene, camera, controls) {
 			camera.updateProjectionMatrix();
 		}
 	}
-	requestAnimationFrame(function() {
+	requestAnimationFrame(function () {
 		resizeCanvasToDisplaySize();
 		update(renderer, scene, camera, controls);
 	});
