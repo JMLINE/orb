@@ -9,7 +9,7 @@ function init() {
 		1000 // far clipping plane
 	);
 	// z axis was 80
-	camera.position.z = 20;
+	camera.position.z = 50;
 	camera.position.x = 0;
 	camera.position.y = 20;
 	camera.lookAt(new THREE.Vector3(0, 0, 0));
